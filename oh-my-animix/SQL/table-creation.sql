@@ -38,7 +38,7 @@ create table titles (
     foreign key (creator_id)
     references app_users(id),
 
-    constraint title_creator_fk
+    constraint title_category_fk
     foreign key (category_id)
     references categories(id)
 );
@@ -53,7 +53,7 @@ create table anime_list (
     foreign key (owner_id)
     references app_users(id)
 
-    constraint anime_list_category_fk
+    constraint list_category_fk
     foreign key (category_id)
     references categories(id)
 );
